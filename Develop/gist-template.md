@@ -4,7 +4,7 @@ Regex or regular expressions are very useful in extracting information that is n
 
 ## Summary
 
-In this tutorial we will explain the usage of different components of a regular expression used to match Hex Values. The hexadecimal number system, also called base-16 or hex, is a number system that uses 16 unique symbols to represent an specific value, those symbols are 0-9 and a-f. This system will be used as a color code to express and match a specific color. We will be using the following regex:
+In this tutorial we will explain the usage of different components of a regular expression used to match Hex Values. The hexadecimal number system, also called base-16 or hex, is a number system that uses 16 unique symbols to represent a specific value, those symbols are 0-9 and a-f. This system will be used as a color code to express and match a specific color. We will be using the following regex:
 ```
 /^#?([a-f0-9]{6}|[a-f0-9]{3})$/
 ```
@@ -31,7 +31,7 @@ The quantifiers will set the limit of the string that our regex matches. Most of
 - The `?` matches the pattern zero or one time.
 - The `{6}` matches the pattern exactly `6` times, this represents the length of the component.
 - The `{3}` matches the pattern exactly `3` times, this represents the length of the component.
-As we can notice, we have to length components, this is because we have two types of formats, and we know this because of the `or` operator, which we will explain below.
+As we can notice, we have two length components, this is because we have two types of formats, and we know this because of the `or` operator, which we will explain below.
 
 ### OR Operator
 The `or` operator is represented with the character `|`. This operator indicates that it could be one or other of the two components we are separating with the `|` symbol. As we mentioned before, we have to types of formats, that is why we are using the `or` operator. This means that our first pattern either be `6` characters `[a-f0-9]{6}` or `3` characters `[a-f0-9]{3}`.
